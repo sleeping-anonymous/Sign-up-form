@@ -11,6 +11,59 @@
     font-style: normal;
 }
 
-body {
+body,
+html {
+    height: 100%;
+}
+
+.left {
+    width: 35%;
+    height: 100%;
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    position: relative;
+    /* just for credits positoned absolute*/
+}
+
+.logo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(150, 150, 150, 0.6);
+    margin-top: 30%;
+}
+
+.logo img {
+    height: 150px;
+    display: inline-block;
+}
+
+.logo h2 {
     font-family: "MyFont", sans-serif;
+    font-weight: 800;
+    font-size: 72px;
+}
+
+.credits {
+    position: absolute;
+    /* better than fixed, so it stays inside .left */
+    bottom: 20px;
+    width: 100%;
+    /*needed to center text */
+    text-align: center;
+    font-size: 0.9rem;
+    color: aliceblue;
+    opacity: 0.9;
+}
+
+.credits a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(240, 248, 255, 0.392);
 }
